@@ -1,9 +1,15 @@
 import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
+import { Client } from '@notionhq/client'
 
 export async function getServerSideProps(context) {
   console.log("ssr log test");
+  console.log("notion token: " + process.env.NOTION_TOKEN);
+
+  const notion = new Client({
+    auth: process.env.NOTION_TOKEN,
+  })
 
   const supporterList = [
     {
@@ -48,7 +54,7 @@ export default function Home(props) {
           <ul>
           
           {props.supporterList.map(supporter => (
-            <li>{supporter.name}</li>
+            <li key={supporter.id}>{supporter.name}</li>
           ))}
           </ul>
         </div>
