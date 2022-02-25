@@ -6,15 +6,17 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Next.js Starter!</title>
+        <title>No War Credentials.</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <Header title="Welcome to my app!" />
+        <Header title="No War Credentials." />
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Acknowledge that you position against war.
         </p>
+
+
       </main>
 
       <Footer />
