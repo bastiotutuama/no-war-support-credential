@@ -36,12 +36,22 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main className="">
         <Header title="No War Credentials." />
         <p className="description">
           Acknowledge that you position against war.
         </p>
 
+        <h2 className="mt-8"><strong>Supporters</strong></h2>
+
+        <div>
+          <ul>
+          
+          {props.supporterList.map(supporter => (
+            <li>{supporter.name}</li>
+          ))}
+          </ul>
+        </div>
 
       </main>
 
