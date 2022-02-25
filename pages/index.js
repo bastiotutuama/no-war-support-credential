@@ -11,6 +11,14 @@ export async function getServerSideProps(context) {
     auth: process.env.NOTION_TOKEN,
   })
 
+  async () => {
+    //https://www.notion.so/1648factory/119a9d7d5bf141fb886678b9f6306fb2?v=81cfa99447b4469da882d757d0e1ffa5
+    const supportersList = await notion.databases.query({
+      database_id: '119a9d7d5bf141fb886678b9f6306fb2'
+    })
+    console.log(supportersList)
+  }
+
   const supporterList = [
     {
       name: "first",
